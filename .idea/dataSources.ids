@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails selfievolution: development" uuid="6166b4fa-f3bb-486d-8de6-29f790267482">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails selfievolution: test" uuid="e3c4186e-ad93-41a1-877e-abd1e6e40173">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails selfievolution: production" uuid="51b84d82-9a29-4579-81fe-b748075c6eb1">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

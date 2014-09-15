@@ -1,7 +1,11 @@
 Selfievolution::Application.routes.draw do
-  
 
- namespace :api do  
+  root "dashboard#index"
+
+  resources :pupils
+  resources :dashboard, only: [:index]
+
+  namespace :api do
     namespace :v1 do
       resources :pupils
     end

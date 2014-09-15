@@ -10,7 +10,6 @@ class CreateParties < ActiveRecord::Migration
 			t.string :sex
 			t.date :birthday
 
-
       t.timestamps
     end
   end

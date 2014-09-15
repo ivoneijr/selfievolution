@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2570314012">
+    <data-source source="LOCAL" name="Rails selfievolution: development" uuid="6166b4fa-f3bb-486d-8de6-29f790267482">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:selfievolution_development</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails selfievolution: test" uuid="e3c4186e-ad93-41a1-877e-abd1e6e40173">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:selfievolution_test</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails selfievolution: production" uuid="51b84d82-9a29-4579-81fe-b748075c6eb1">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:selfievolution_production</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+
