@@ -135,7 +135,6 @@
     <orderEntry type="library" scope="PROVIDED" name="rack (v1.5.2, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.2, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails (v4.0.2, ruby-1.9.3-p484) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rails-api (v0.2.1, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="railties (v4.0.2, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v10.3.2, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rdoc (v4.1.1, ruby-1.9.3-p484) [gem]" level="application" />

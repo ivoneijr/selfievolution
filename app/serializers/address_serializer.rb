@@ -1,3 +1,4 @@
 class AddressSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :country, :state, :city, :neighborhood, :street, :number, :complement
+
 end

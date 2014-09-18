@@ -3,11 +3,14 @@ Selfievolution::Application.routes.draw do
   root "dashboard#index"
 
   resources :pupils
+  resources :users
   resources :dashboard, only: [:index]
 
   namespace :api do
     namespace :v1 do
       resources :pupils
+      resources :users
+      resources :addresses
     end
   end
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140909005908) do
+ActiveRecord::Schema.define(version: 20140918034452) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,23 @@ ActiveRecord::Schema.define(version: 20140909005908) do
 
   add_index "addresses", ["party_id"], name: "index_addresses_on_party_id", using: :btree
 
+  create_table "coaches", force: true do |t|
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "coaches", ["user_id"], name: "index_coaches_on_user_id", using: :btree
+
+  create_table "companies", force: true do |t|
+    t.string   "cnpj"
+    t.integer  "party_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "companies", ["party_id"], name: "index_companies_on_party_id", using: :btree
+
   create_table "parties", force: true do |t|
     t.string   "type"
     t.string   "name"
@@ -44,6 +61,8 @@ ActiveRecord::Schema.define(version: 20140909005908) do
 
   create_table "pupils", force: true do |t|
     t.integer  "user_id"
+    t.decimal  "weight"
+    t.decimal  "height"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

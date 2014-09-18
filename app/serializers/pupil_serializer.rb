@@ -1,5 +1,5 @@
 class PupilSerializer < ActiveModel::Serializer
-  attributes :id, :name, :email, :facebook, :twitter, :age
+  attributes :id, :name, :email, :facebook, :twitter, :age, :address
 
   def name
 		object.user.party.name  	
@@ -18,8 +18,13 @@ class PupilSerializer < ActiveModel::Serializer
 	end
 
 	def age
-		Date.today.year - object.user.party.birthday.year
-		
+		if object.user.party.birthday?
+			Date.today.year - object.user.party.birthday.year
+		end
 	end
+
+  def address
+    object.user.party.address
+  end
 
 end
