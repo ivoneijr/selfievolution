@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140918034452) do
+ActiveRecord::Schema.define(version: 20141014002754) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,29 @@ ActiveRecord::Schema.define(version: 20140918034452) do
 
   add_index "addresses", ["party_id"], name: "index_addresses_on_party_id", using: :btree
 
+  create_table "assessments", force: true do |t|
+    t.decimal  "subscapularis"
+    t.decimal  "triceps"
+    t.decimal  "chest"
+    t.decimal  "axilar"
+    t.decimal  "supra"
+    t.decimal  "abs"
+    t.decimal  "thigh"
+    t.decimal  "height"
+    t.decimal  "weight"
+    t.decimal  "bmi"
+    t.decimal  "bodyfat"
+    t.integer  "coach_id"
+    t.integer  "gym_id"
+    t.integer  "pupil_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "assessments", ["coach_id"], name: "index_assessments_on_coach_id", using: :btree
+  add_index "assessments", ["gym_id"], name: "index_assessments_on_gym_id", using: :btree
+  add_index "assessments", ["pupil_id"], name: "index_assessments_on_pupil_id", using: :btree
+
   create_table "coaches", force: true do |t|
     t.integer  "user_id"
     t.datetime "created_at"
@@ -48,6 +71,14 @@ ActiveRecord::Schema.define(version: 20140918034452) do
 
   add_index "companies", ["party_id"], name: "index_companies_on_party_id", using: :btree
 
+  create_table "gyms", force: true do |t|
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "gyms", ["user_id"], name: "index_gyms_on_user_id", using: :btree
+
   create_table "parties", force: true do |t|
     t.string   "type"
     t.string   "name"
@@ -61,12 +92,12 @@ ActiveRecord::Schema.define(version: 20140918034452) do
 
   create_table "pupils", force: true do |t|
     t.integer  "user_id"
-    t.decimal  "weight"
-    t.decimal  "height"
+    t.integer  "coach_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  add_index "pupils", ["coach_id"], name: "index_pupils_on_coach_id", using: :btree
   add_index "pupils", ["user_id"], name: "index_pupils_on_user_id", using: :btree
 
   create_table "users", force: true do |t|

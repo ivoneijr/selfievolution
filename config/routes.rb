@@ -1,16 +1,20 @@
 Selfievolution::Application.routes.draw do
 
+  get '/onepage', :to => redirect('/onepage.html')
+
+
   root "dashboard#index"
 
   resources :pupils
+  resources :coaches
+  resources :gyms
   resources :users
   resources :dashboard, only: [:index]
 
   namespace :api do
     namespace :v1 do
-      resources :pupils
       resources :users
-      resources :addresses
+      resources :pupils
     end
   end
 

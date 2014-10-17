@@ -1,4 +1,4 @@
-class API::V1::ApplicationController <  ActionController::Metal
+class API::V1::ApplicationController <  ActionController::Base
 
 	 include ActionController::StrongParameters
 	 include ActionController::Rendering
@@ -6,5 +6,9 @@ class API::V1::ApplicationController <  ActionController::Metal
 	 include ActionController::Serialization
 	 include ActionController::Redirecting
 	 include Rails.application.routes.url_helpers
-	 
+
+
+  protect_from_forgery with: :null_session
+
+
  end

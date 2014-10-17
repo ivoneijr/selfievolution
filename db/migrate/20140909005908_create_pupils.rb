@@ -1,15 +1,11 @@
 class CreatePupils < ActiveRecord::Migration
   def change
-    create_table :pupils do |t|
-      t.references :user, index: true
+    create_table :pupils do |p|
 
-      #altura
-      t.decimal :weight 
-      #peso
-      t.decimal :height
+      p.references :user, index: true
+      p.references :coach, index: true
 
-
-      t.timestamps
+      p.timestamps
     end
   end
 end
