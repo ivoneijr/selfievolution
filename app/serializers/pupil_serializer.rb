@@ -1,12 +1,35 @@
 class PupilSerializer < ActiveModel::Serializer
-  attributes :id, :name, :email, :facebook, :twitter, :age, :address
+  attributes :id, :name, :phone, :webpage, :sex, :birthday, :email, :password, :facebook, :twitter, :age, :address
 
   def name
-		object.user.party.name  	
+    name = object.user.party.name 
+    if name
+      name
+    end
+  end
+
+  def phone
+    object.user.party.phone    
+  end
+
+  def webpage
+    object.user.party.webpage
+  end
+  
+  def birthday
+    object.user.party.birthday
+  end
+
+  def sex
+    object.user.party.sex
   end
 
   def email
   	object.user.email
+  end
+
+  def password
+    object.user.password
   end
 
   def facebook

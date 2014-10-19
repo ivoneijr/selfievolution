@@ -18,8 +18,19 @@ class API::V1::PupilsController < API::V1::ApplicationController
 
 # POST /api/v1/pupils
   def create
-    pupil = Pupil.new(pupil_params)
-    if pupil.save
+
+    person = Person.new(name: pupil_params[:name],
+                        phone: pupil_params[:phone],
+                        webpage: pupil_params[:webpage],
+                        sex: pupil_params[:sex])
+    
+    user = User.new(party: person,
+                    email: pupil_params[:email],
+                    password: pupil_params[:password])
+
+    pupil = Pupil.create(user:user)
+    
+    if pupil
       render json: pupil, status: 201, location: pupil
     else
       render json: pupil.errors, status: 422
@@ -28,7 +39,7 @@ class API::V1::PupilsController < API::V1::ApplicationController
 
   private
     def pupil_params
-      params.require(:pupil).permit(:email, :facebook, :password, :twitter)
+      params.require(:pupil).permit(:name, :phone, :webpage, :sex, :birthday, :email, :password, :facebook, :twitter, :age, :address)
     end
 end
 

@@ -28,6 +28,6 @@ class API::V1::UsersController < API::V1::ApplicationController
 
   private
     def user_params
-      params.require(:user).permit(:email, :facebook, :password)
+      params.require(:user).permit(:email, :password)
     end
 end

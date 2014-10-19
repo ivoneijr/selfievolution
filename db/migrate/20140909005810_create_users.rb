@@ -5,6 +5,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :password
       t.string :facebook
       t.string :twitter
+      
       t.references :party, index: true
 
       t.timestamps

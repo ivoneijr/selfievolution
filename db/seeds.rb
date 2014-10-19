@@ -17,7 +17,7 @@ address = Address.new(street: 'Rua Padre Joao Batista Reus',
 person = Person.new(address:address,
                     name: 'Ivonei',
                     phone:'51 91879477',
-                    webpage:'facebook/ivoneijr',
+                    webpage:'www.mypage.com/ivoneijr',
                     sex:'M')
 
 user = User.new(party:person,
