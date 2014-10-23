@@ -14,6 +14,9 @@ Selfievolution::Application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :users
+      resources :assessments
+      resources :gyms
+      resources :coaches
       resources :pupils
     end
   end
