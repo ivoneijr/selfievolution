@@ -42,7 +42,7 @@ class PupilsController < ApplicationController
   # DELETE /pupils/1
   def destroy
     @pupil.destroy
-    redirect_to pupils_url, notice: 'Pupil was successfully destroyed.'
+    redirect_to pupils_url, notice: 'Pupil was successfully destroyed...'
   end
 
   private
